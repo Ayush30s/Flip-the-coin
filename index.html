@@ -1,13 +1,15 @@
-This is a flip the coin game in which we guess a coins side - tails or heads, and the computer also guess one of them. If my guess is same as the computer guess, then I will win, else I will lose.
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coin Flip Game</title>
 
      <style>
+         .Insturction {
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+         }
         .container {
             margin-top : 200px;
             margin-left: 500px;
@@ -44,9 +46,9 @@ This is a flip the coin game in which we guess a coins side - tails or heads, an
         }
 
         button:active {
+            border:1px solid blue
             background-color: #3eabd3;
             color: #fff;
-            /* box-shadow: 0 2px 4px rgba(0,0,0,0.2); */
         }
 
         button {
@@ -58,7 +60,9 @@ This is a flip the coin game in which we guess a coins side - tails or heads, an
      </style>
 </head>
 <body>
-
+        <div  class = "Insturction">
+            This is a flip the coin game in which we guess a coins side - tails or heads, and the computer also guess one of them. If my guess is same as the computer guess, then I will win, else I will lose.
+        </div>
     
         <div class="container">
             <button class="Tails" onclick="
