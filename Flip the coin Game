@@ -1,0 +1,96 @@
+This is a flip the coin game in which we guess a coins side - tails or heads, and the computer also guess one of them. If my guess is same as the computer guess, then I will win, else I will lose.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game</title>
+
+     <style>
+        .container {
+            margin-top : 200px;
+            margin-left: 500px;
+            height: 130px;
+            width: 250px;
+            border: 2px solid rgb(38, 4, 46);
+            border-radius: 10px;
+            background-color: rgb(70, 243, 243);
+        }
+        .Tails {
+            margin: 10px;
+            background-color: cornflowerblue;
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            border: transparent;
+            background: transparent;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1) , 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .Heads {
+            margin: 10px;
+            background-color: cornflowerblue;
+            height: 100px;
+            width: 100px;
+            border: transparent;
+            border-radius: 10px;
+            background: transparent;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1) , 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #3eabd3;
+            color: #fff;
+            /* box-shadow: 0 2px 4px rgba(0,0,0,0.2); */
+        }
+
+        button {
+            transition: background-color 0.3s, color 0.3s , box-shadow 0.3s;
+        }
+
+        
+        
+     </style>
+</head>
+<body>
+
+    
+        <div class="container">
+            <button class="Tails" onclick="
+                 var cpick = compterMove();
+                 if('Tails' == cpick) {
+                     alert(`You : Tails , Computer : ${cpick} , You win!`);
+                 }else{
+                     alert(`You : Tails , Computer : ${cpick} , You lost!`);
+                 }
+             ">Tails</button>
+     
+             <button class="Heads" onclick="
+                 var cpick = compterMove();
+                 if('Heads' == cpick) {
+                     alert(`You : Heads , Computer : ${cpick} , You win!`);
+                 }else{
+                     alert(`You : Heads , Computer : ${cpick} , You lost!`);
+                 }
+             ">Heads</button>
+         </div>
+
+    <script>
+        var cm = '';
+        function compterMove() {
+            var num = Math.random();
+            if(num < 1/2) {
+                return 'Tails';
+            }else{
+                return 'Heads';
+            }
+        }
+        cm = compterMove();
+    </script>
+</body>
+</html>
